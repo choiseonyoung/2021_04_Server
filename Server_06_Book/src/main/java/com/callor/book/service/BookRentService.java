@@ -1,6 +1,5 @@
 package com.callor.book.service;
 
-import java.sql.Connection;
 import java.util.List;
 
 import com.callor.book.model.BookRentDTO;
