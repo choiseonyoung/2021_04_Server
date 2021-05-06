@@ -33,12 +33,18 @@
 	for(BuyerDTO d : buList) {
 	
 	}
+	
+	items에 든 건 Controller에서 받은 list, 배열
+	list를 전체 반복하면서 각각의 요소를 getter하여 var로 지정된 변수에 담기
+	EL tag를 사용하여 각각의 변수를 화면에 출력
+	
 	 --%>
-	<c:forEach items="${BUYERS}" var="BUYER"> <%--forEach 어찌구 이용해서 BUYER에 들어있는 리스트 출력 --%>
+	<c:forEach items="${BUYERS}" var="BUYER"> <%--forEach문 이용해서 BUYER에 들어있는 리스트 출력 --%>
 		<p>${BUYER.bu_code},
 			<a href="page2?bu_code=${BUYER.bu_code}">
-			${BUYER.bu_name}</a>,
+			${BUYER.bu_name}</a>, <%--화면에 보여지는 이름--%>
 			${BUYER.bu_tel},${BUYER.bu_addr}
+			<%-- 이름 부분에 링크가 생겨서 이름을 클릭할 수 있도록 만든 것 --%>
 	</c:forEach>
 </body>
 </html>

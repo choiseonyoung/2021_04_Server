@@ -58,10 +58,10 @@ public class BuyerServiceImplV1 implements BuyerService {
 	public List<BuyerDTO> findByName(String bu_name) {
 		// TODO 고객 이름으로 검색하기
 		String sql = "SELECT * FROM tbl_buyer";
-		sql += " WHERE bu_name LIKE '%' || ? || '%' ";
+		sql += " WHERE bu_name LIKE '%' || ? || '%' "; // 회원 테이블로부터 중간 문자열 검색
 
 		PreparedStatement pStr = null;
-		try {
+		try { // 문자열 검색 결과있으면 리스트로 만들어서 리스트 리턴
 			pStr = dbConn.prepareStatement(sql);
 			pStr.setString(1, bu_name.trim()); // 입력된거에 화이트스페이스 있으면 제거하라
 			List<BuyerDTO> buList = this.select(pStr);
