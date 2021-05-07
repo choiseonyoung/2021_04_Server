@@ -207,9 +207,12 @@ public class BookRentController extends HttpServlet {
 			
 			int result = brService.insert(brVO);
 			if(result > 0) {
-				out.println("대여정보 추가 성공!!!");
+//				out.println("대여정보 추가 성공!!!");
+				resp.sendRedirect("/book/");
 			} else {
-				out.println("대여정보 추가 실패!!");
+//				out.println("대여정보 추가 실패!!");
+				resp.sendRedirect("/book/order"); 
+				// 실패하면 book/order 페이지로 점프 !
 			}
 			out.close();
 			
