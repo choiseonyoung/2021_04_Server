@@ -6,6 +6,7 @@ import com.callor.diet.model.MyFoodCDTO;
 import com.callor.diet.model.MyFoodVO;
 
 public interface MyFoodService {
+	
 	public List<MyFoodCDTO> selectAll();
 	public MyFoodCDTO findById(Long seq);
 	
@@ -15,4 +16,5 @@ public interface MyFoodService {
 	public Integer insert(MyFoodVO myFoodVO);
 	public Integer update(MyFoodVO myFoodVO);
 	public Integer delete(Long seq);
+
 }
