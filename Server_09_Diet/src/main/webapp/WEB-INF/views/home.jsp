@@ -20,7 +20,7 @@ webapp 폴더는 프로젝트의 외부에서 접근할 때 root folder로 인�
 그런데 지금 프로젝트에서 슬래시(/)로 접근하는 모든 요청은 homeController가 catcher 하도록 만들어져 있기 때문에
 어떠한 파일로 연결을 할 수 없다.
  --%>
-<link rel="stylesheet" href="${rootPath}/css/home.css?ver=1" />
+<link rel="stylesheet" href="/diet/css/home.css?ver=2021-05-18-112" />
 </head>
 <body>
 	<h1>다이어트를 도와줘!!!</h1>
